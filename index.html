@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="neuralBackground"></canvas>
+    
+    <div class="container">
+        <h1>Advanced Password Generator</h1>
+        
+        <div class="password-container">
+            <div class="password-display" id="passwordDisplay">
+                <span id="passwordText">Your password will appear here</span>
+            </div>
+            <button class="copy-btn" id="copyBtn">Copy password</button>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="lengthRange">Password length: <span id="lengthValue">16</span></label>
+                <input type="range" id="lengthRange" min="8" max="32" value="16">
+            </div>
+            
+            <div class="control-group">
+                <label for="uppercaseCheck">capital letters (A-Z)</label>
+                <input type="checkbox" id="uppercaseCheck" checked>
+            </div>
+            
+            <div class="control-group">
+                <label for="lowercaseCheck">small letters (a-z)</label>
+                <input type="checkbox" id="lowercaseCheck" checked>
+            </div>
+            
+            <div class="control-group">
+                <label for="numbersCheck">Numbers (0-9)</label>
+                <input type="checkbox" id="numbersCheck" checked>
+            </div>
+            
+            <div class="control-group">
+                <label for="symbolsCheck">(!@#$%^&*) Symbols</label>
+                <input type="checkbox" id="symbolsCheck" checked>
+            </div>
+            
+            <button class="generate-btn" id="generateBtn">Generate a new password</button>
+            
+            <div class="strength-container">
+                <div class="strength-info">
+                    <span class="strength-label">:Password strength</span>
+                    <span class="strength-value" id="strengthText">average</span>
+                </div>
+                <div class="strength-meter">
+                    <div class="strength-bar" id="strengthBar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="neural-background.js"></script>
+    <script src="password-generator.js"></script>
+</body>
+</html>
